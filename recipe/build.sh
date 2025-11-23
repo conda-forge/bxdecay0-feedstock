@@ -12,6 +12,9 @@ cmake -S . -B build \
 
 cmake --build build -j${CPU_COUNT}
 
-ctest -V --test-dir build
+# Skip ``ctest`` when cross-compiling
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR:-}" != "" ]]; then
+    ctest -V --test-dir build
+fi
 
 cmake --install build

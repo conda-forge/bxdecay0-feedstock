@@ -10,12 +10,14 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('bxdecay0', max_pin='x.x.x') }}
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - cmake

@@ -11,7 +11,8 @@ source:
 build:
   skip: true  # [win]
   number: 1
-  skip_compile_pyc: ["*"]
+  skip_compile_pyc:
+    - "*"
   run_exports:
     - {{ pin_subpackage('bxdecay0', max_pin='x.x.x') }}
 

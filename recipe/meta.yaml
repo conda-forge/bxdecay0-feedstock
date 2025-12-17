@@ -1,4 +1,4 @@
-{% set version = "1.1.2" %}
+{% set version = "1.2.0" %}
 
 package:
   name: bxdecay0
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/BxCppDev/bxdecay0/archive/{{ version }}.tar.gz
-  sha256: 3c0a621f78629125159e75842bd8c8250698eca653804a37a1e6b4581c5d6fa1
+  sha256: eb67dcef0f17fbf8f2139f3a36b9bfcf18511c29274e4ec589f6efae953668b6
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
   skip_compile_pyc:
     - "*"
   run_exports:

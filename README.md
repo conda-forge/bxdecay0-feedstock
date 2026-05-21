@@ -30,7 +30,6 @@ BxDecay0 provides an extension library which implements an interface for
 Geant4 (through a PrimaryGeneratorAction class and its associated
 messenger).
 
-
 Current build status
 ====================
 

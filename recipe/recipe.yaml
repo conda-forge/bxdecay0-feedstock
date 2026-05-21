@@ -1,25 +1,27 @@
-{% set version = "1.2.0" %}
+schema_version: 1
+
+context:
+  version: "1.2.0"
 
 package:
   name: bxdecay0
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/BxCppDev/bxdecay0/archive/{{ version }}.tar.gz
+  url: https://github.com/BxCppDev/bxdecay0/archive/${{ version }}.tar.gz
   sha256: eb67dcef0f17fbf8f2139f3a36b9bfcf18511c29274e4ec589f6efae953668b6
 
 build:
-  skip: true  # [win]
-  number: 0
-  skip_compile_pyc:
-    - "*"
-  run_exports:
-    - {{ pin_subpackage('bxdecay0', max_pin='x.x.x') }}
+  number: 1
+  skip: win
+  python:
+    skip_pyc_compilation:
+      - "*"
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - {{ stdlib('c') }}
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib('c') }}
     - cmake
     - make
   host:
@@ -28,13 +30,14 @@ requirements:
     - gsl
     - libblas
   run:
+  run_exports:
+    - ${{ pin_subpackage('bxdecay0', upper_bound='x.x.x') }}
 
-test:
-  commands:
-    - bxdecay0-run -s 1234 -n 1000 -c dbd -N Ge76 -m 1 /tmp/ge76
+tests:
+  - script:
+      - bxdecay0-run -s 1234 -n 1000 -c dbd -N Ge76 -m 1 /tmp/ge76
 
 about:
-  home: https://github.com/BxCppDev/bxdecay0
   summary: Library for the random generation of simulated nuclear decays
   description: |
     The BxDecay0 C++ library provides a set of classes and functions for the
@@ -55,8 +58,9 @@ about:
     messenger).
   license: GPL-3.0-only
   license_file: LICENSE.txt
-  doc_url: https://github.com/BxCppDev/bxdecay0
-  dev_url: https://github.com/BxCppDev/bxdecay0
+  homepage: https://github.com/BxCppDev/bxdecay0
+  repository: https://github.com/BxCppDev/bxdecay0
+  documentation: https://github.com/BxCppDev/bxdecay0
 
 extra:
   recipe-maintainers:

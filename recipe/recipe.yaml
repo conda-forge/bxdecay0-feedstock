@@ -12,7 +12,7 @@ source:
   sha256: eb67dcef0f17fbf8f2139f3a36b9bfcf18511c29274e4ec589f6efae953668b6
 
 build:
-  number: 1
+  number: 2
   skip: win
   python:
     skip_pyc_compilation:

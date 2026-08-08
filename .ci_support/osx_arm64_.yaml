@@ -17,7 +17,7 @@ cxx_compiler_version:
 geant4:
 - 11.4.2
 gsl:
-- '2.7'
+- '2.8'
 libblas:
 - 3.9.* *netlib
 macos_machine:

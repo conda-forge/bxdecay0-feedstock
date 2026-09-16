@@ -55,10 +55,24 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>osx_64</td>
+              <td>osx_64_clhep2.4.4.0geant410.7.4</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=26917&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bxdecay0-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bxdecay0-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_clhep2.4.4.0geant410.7.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_clhep2.4.7.1geant411.3.2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=26917&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bxdecay0-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_clhep2.4.7.1geant411.3.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_clhep2.4.7.2geant411.4.2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=26917&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bxdecay0-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_clhep2.4.7.2geant411.4.2" alt="variant">
                 </a>
               </td>
             </tr>

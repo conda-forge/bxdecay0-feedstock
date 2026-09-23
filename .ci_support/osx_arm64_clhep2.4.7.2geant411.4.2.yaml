@@ -16,6 +16,10 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '21'
+expat:
+- '2'
+freetype:
+- '2'
 geant4:
 - 11.4.2
 gsl:
@@ -29,3 +33,5 @@ target_platform:
 zip_keys:
 - - clhep
   - geant4
+zlib:
+- '1'

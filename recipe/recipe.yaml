@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.2.0"
+  version: "1.2.1"
 
 package:
   name: bxdecay0
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/BxCppDev/bxdecay0/archive/${{ version }}.tar.gz
-  sha256: eb67dcef0f17fbf8f2139f3a36b9bfcf18511c29274e4ec589f6efae953668b6
+  sha256: b6b62b1ce136e1f8241a863d7c36cf06e9a2ef16f9c59105bdd9aeedc26816b3
 
 build:
-  number: 4
+  number: 0
   skip: win
   python:
     skip_pyc_compilation:
